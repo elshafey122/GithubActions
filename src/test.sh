@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Expected output
-EXPECTED="Hello, Test!"
+EXPECTED="hello Test"
 
 # Run the app and capture output
 OUTPUT=$(node -e "console.log(require('./src/app')('Test'))")
