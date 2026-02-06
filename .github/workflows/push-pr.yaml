@@ -1,3 +1,4 @@
+name: nodejs-test
 on:
   push:
     branches:
@@ -5,11 +6,21 @@ on:
       - "release/**"
     paths:
       - "src/**"
+
 jobs:
   test:
-    runs-on : ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Run tests
         run: npm test
