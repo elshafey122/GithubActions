@@ -5,7 +5,7 @@ jobs:
   test:
     strategy:
       fail-fast: false
-      max-parrel: 3
+      max-parallel: 3
       matrix:
         node-version: [16, 18, 20]
         os: [ubuntu-latest,windows-latest-macos-latest]
