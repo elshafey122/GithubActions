@@ -7,7 +7,7 @@ jobs:
     steps:
       - run: |
           depricated = true 
-          if [[depricated]] then;
-            echo ::warning::depricated function found
+          if [[depricated]]; then
+            echo "::warning::depricated function found"
             fi
            
