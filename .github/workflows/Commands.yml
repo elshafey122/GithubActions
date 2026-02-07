@@ -5,9 +5,9 @@ jobs:
   example:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          depricated = true 
-          if [[depricated]]; then
-            echo "::warning::depricated function found"
-            fi
-           
+      - name: Check deprecated function
+        run: |
+          deprecated=true
+          if [[ deprecated ]]; then
+            echo "::warning::Deprecated function found"
+          fi
