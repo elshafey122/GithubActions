@@ -5,6 +5,6 @@ function greet (name){
 
 // module.exports = greet;
 
-// if(Request.name===module){
-//    console.log(greet("world"));
-// }
+if(Request.name===module){
+   console.log(greet("world"));
+}
