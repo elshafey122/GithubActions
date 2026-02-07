@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          depricated = true 
+          if [[depricated]] then;
+            echo ::warning::depricated function found
+            fi
+           
